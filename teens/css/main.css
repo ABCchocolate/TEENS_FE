@@ -1,0 +1,272 @@
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./common.css);
+
+/* 메인 콘텐츠 레이아웃 */
+.main-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    margin-bottom: 40px;
+    align-items: start;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    margin-top: 90px;  /* 헤더 높이 + 여유 */
+    margin-bottom: 50px;
+}
+
+
+/* ========== 슬라이더 ========== */
+.slider-container {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.slider {
+    position: relative;
+    height: 400px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    z-index: 10;
+}
+
+.slider-btn {
+    color: white;
+    background: none;
+    border: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.slider-btn:hover {
+    transform: scale(1.2);
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: white;
+    width: 40px;
+    border-radius: 6px;
+}
+
+/* ========== FAQ 섹션 ========== */
+.faq-section {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    height: 400px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.faq-section::-webkit-scrollbar {
+    display: none;
+}
+
+.faq-section h2 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #333;
+    font-weight: 700;
+}
+
+.faq-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item:hover {
+    background: #f9f9f9;
+    padding-left: 10px;
+    border-radius: 8px;
+}
+
+.faq-q {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    font-size: 17px;
+    padding-left: 15px;
+    align-items: center;
+}
+
+.faq-q::first-letter {
+    color: #5469DE;
+}
+
+.faq-a {
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+    padding-left: 15px;
+    border-left: 2px solid #e0e0e0;
+    margin-left: 15px;
+}
+
+/* ========== 하단 섹션 ========== */
+.bottom-section {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* 좌측: 메뉴 */
+.menu-cards-wrapper {
+    flex: 1; /* 두 영역 똑같음 */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 30px;
+}
+
+/* 구분선 (원하면 유지, 아니면 주석처리하면 됨) */
+.menu-cards-wrapper::after {
+    content: '';
+    width: 2px;
+    height: 100%;
+    background: #e0e0e0;
+    position: absolute;
+    right: -5px;
+    top: 0;
+}
+
+/* 메뉴 4칸 그리드 */
+.menu-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* 카드 스타일 */
+.menu-card {
+    padding: 25px 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+}
+
+/* 우측: 배너 */
+.security-section {
+    flex: 1; /* 완전 똑같은 비율 */
+    display: flex;
+    align-items: center;
+}
+
+.security-section img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.security-section img:hover {
+    transform: translateY(-3px);
+}
+
+/* ========== 반응형 ========== */
+@media (max-width: 1200px) {
+    .bottom-section {
+        flex-direction: column;
+    }
+    .menu-cards-wrapper::after {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    .menu-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .slider {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider {
+        height: 280px;
+    }
+}
