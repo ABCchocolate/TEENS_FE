@@ -81,12 +81,7 @@ loginForm.addEventListener("submit", (e) => {
     return;
   }
 
-  // 3. 아이디 존재 여부 확인
-  if (!validUsers[userId]) {
-    userIdError.textContent = "존재하지 않는 아이디입니다.";
-    return;
-  }
-
+  
   // 4. 비밀번호 일치 여부 확인
   if (validUsers[userId] !== password) {
     generalError.textContent = "아이디 또는 비밀번호가 올바르지 않습니다.";
