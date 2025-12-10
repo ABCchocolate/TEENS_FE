@@ -9,9 +9,9 @@ header {
     transition: transform 0.1s ease;
 }
 
-/* 스크롤해서 아래로 내려갈 때 — 헤더의 일부만 보이게 */
+/* 스크롤해서 내리면 헤더 조금만 보이는거 */
 header.hide {
-    transform: translateY(-60px); /* 헤더 높이 - 남길 높이 */
+    transform: translateY(-60px);
 }
 
 /* 마우스 올리면 다시 전부 나오게 */

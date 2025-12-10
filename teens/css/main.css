@@ -20,12 +20,12 @@ body::-webkit-scrollbar {
 }
 
 .container {
-    margin-top: 90px;  /* 헤더 높이 + 여유 */
+    margin-top: 90px; 
     margin-bottom: 50px;
 }
 
 
-/* ========== 슬라이더 ========== */
+/* 슬라이더 */
 .slider-container {
     position: relative;
     background: white;
@@ -111,7 +111,7 @@ body::-webkit-scrollbar {
     border-radius: 6px;
 }
 
-/* ========== FAQ 섹션 ========== */
+/*  FAQ 섹션  */
 .faq-section {
     background: white;
     border-radius: 20px;
@@ -173,23 +173,23 @@ body::-webkit-scrollbar {
     margin-left: 15px;
 }
 
-/* ========== 하단 섹션 ========== */
+/*  하단 섹션  */
 .bottom-section {
     display: flex;
     gap: 30px;
     align-items: stretch;
 }
 
-/* 좌측: 메뉴 */
+
 .menu-cards-wrapper {
-    flex: 1; /* 두 영역 똑같음 */
+    flex: 1; 
     display: flex;
     flex-direction: column;
     position: relative;
     margin-left: 30px;
 }
 
-/* 구분선 (원하면 유지, 아니면 주석처리하면 됨) */
+
 .menu-cards-wrapper::after {
     content: '';
     width: 2px;
@@ -200,14 +200,14 @@ body::-webkit-scrollbar {
     top: 0;
 }
 
-/* 메뉴 4칸 그리드 */
+
 .menu-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
-/* 카드 스타일 */
+
 .menu-card {
     padding: 25px 15px;
     text-align: center;
@@ -226,9 +226,9 @@ body::-webkit-scrollbar {
     margin-bottom: 12px;
 }
 
-/* 우측: 배너 */
+
 .security-section {
-    flex: 1; /* 완전 똑같은 비율 */
+    flex: 1;
     display: flex;
     align-items: center;
 }
