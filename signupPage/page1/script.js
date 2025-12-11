@@ -91,19 +91,8 @@ checkUserIdBtn.addEventListener("click", () => {
     }
 });
 
-
-// -----------------------------
-// 회원가입 제출
-// -----------------------------
-document.getElementById("signupForm").addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    generalError.textContent = "";
-
-    if (signupBtn.disabled) {
-        generalError.textContent = "모든 정보를 입력해주세요.";
-        return;
-    }
-
-    alert("회원가입 완료!");
+document.getElementById("signupBtn").addEventListener("click", () => {
+    location.href = "../page2/index.html";
 });
+
+

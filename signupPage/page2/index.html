@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEENS Login</title>
+    <title>TEENS signup-2</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/1429680651.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="login-container">
+
         <!-- 왼쪽 -->
         <div class="brand-section">
             <div class="brand-content">
@@ -23,25 +24,12 @@
             </div>
         </div>
 
-        <!-- 오른쪽  -->
+        <!-- 오른쪽 -->
         <div class="form-section">
             <form id="loginForm" class="login-form">
                 <h2 class="form-title">sign in</h2>
 
-                <!-- 아이디 입력  -->
-                <div class="form-group">
-                    <label for="userId" class="form-label">아이디</label>
-                    <input
-                        type="text"
-                        id="userId"
-                        name="userId"
-                        class="form-input"
-                        placeholder="아이디를 입력해주세요"
-                    />
-                    <span id="userIdError" class="error-message"></span>
-                </div>
-
-                <!-- 비밀번호 입력  -->
+                <!-- 비밀번호 입력 -->
                 <div class="form-group">
                     <label for="password" class="form-label">비밀번호</label>
                     <div class="password-wrapper">
@@ -59,18 +47,36 @@
                     <span id="passwordError" class="error-message"></span>
                 </div>
 
-                <!-- 에러 메시지 -->
+                <!-- 비밀번호 확인 -->
+                <div class="form-group">
+                    <label for="passwordConfirm" class="form-label">비밀번호 확인</label>
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="passwordConfirm"
+                            name="passwordConfirm"
+                            class="form-input"
+                            placeholder="비밀번호를 다시 입력해주세요"
+                        />
+                        <button type="button" id="togglePasswordConfirm" class="toggle-btn">
+                            <span id="toggleIconConfirm"><i class="fa-solid fa-eye-slash"></i></span>
+                        </button>
+                    </div>
+                    <span id="passwordConfirmError" class="error-message"></span>
+                </div>
+
+                <!-- 에러 -->
                 <span id="generalError" class="error-message"></span>
 
-                <!-- 로그인 버튼 -->
-                <button type="submit" id="loginBtn" class="login-btn" disabled>
-                    로그인
+
+                <button type="submit" id="signupBtn" class="signup-btn" disabled>
+                    회원가입
                 </button>
 
-                <!-- 회원가입 이동 -->
+                <!-- 로그인이동 -->
                 <div class="bottom-links">
-                    <span class="text-gray">계정이 없으신가요?</span>
-                    <a href="../signupPage/index.html" class="link-signup">회원가입</a>
+                    <span class="text-gray">계정이 있으신가요?</span>
+                    <a href="../loginPage/index.html" class="link-login">로그인</a>
                 </div>
             </form>
         </div>
