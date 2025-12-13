@@ -16,7 +16,10 @@ const emailCodeError = document.getElementById("emailCodeError");
 const emailTimer = document.getElementById("emailTimer");
 
 let timerInterval = null;
-let timeLeft = 180; // 3분 (초 단위)
+let timeLeft = 180; // 3분
+
+// 이메일 형식 정규식 (ZZZZZ@ZZZZ.com)
+const emailRegex = /^[A-Za-z0-9]+@[A-Za-z0-9]+\.com$/;
 
 // -----------------------------
 // 초기 상태
@@ -33,11 +36,13 @@ window.addEventListener("DOMContentLoaded", () => {
 // -----------------------------
 emailInput.addEventListener("input", () => {
     sendEmailCodeBtn.disabled = emailInput.value.trim() === "";
+    emailError.textContent = "";
     validateSignupStatus();
 });
 
 userIdInput.addEventListener("input", () => {
     checkUserIdBtn.disabled = userIdInput.value.trim() === "";
+    userIdError.textContent = "";
     validateSignupStatus();
 });
 
@@ -47,7 +52,9 @@ userIdInput.addEventListener("input", () => {
 function validateSignupStatus() {
     const emailFilled = emailInput.value.trim() !== "";
     const userIdFilled = userIdInput.value.trim() !== "";
-    const emailCodeFilled = emailCodeWrapper.style.display === "none" || emailCodeInput.value.trim() !== "";
+    const emailCodeFilled =
+        emailCodeWrapper.style.display === "none" ||
+        emailCodeInput.value.trim() !== "";
 
     signupBtn.disabled = !(emailFilled && userIdFilled && emailCodeFilled);
 }
@@ -60,6 +67,11 @@ sendEmailCodeBtn.addEventListener("click", () => {
 
     if (!email) {
         emailError.textContent = "이메일을 입력해주세요.";
+        return;
+    }
+
+    if (!emailRegex.test(email)) {
+        emailError.textContent = "example@domain.com 형식으로 입력해주세요.";
         return;
     }
 
@@ -111,7 +123,7 @@ checkUserIdBtn.addEventListener("click", () => {
         return;
     }
 
-    const dummyUsedIds = ["mare2", "teens", "admin"]; // 더미 데이터
+    const dummyUsedIds = ["mare2", "teens", "admin"];
 
     if (dummyUsedIds.includes(id)) {
         userIdError.textContent = "이미 사용 중인 아이디입니다.";
@@ -128,6 +140,7 @@ checkUserIdBtn.addEventListener("click", () => {
 // -----------------------------
 signupBtn.addEventListener("click", () => {
     const code = emailCodeInput.value.trim();
+
     if (emailCodeWrapper.style.display !== "none" && code.length !== 6) {
         emailCodeError.textContent = "6자리 인증코드를 입력해주세요.";
         return;
@@ -135,6 +148,5 @@ signupBtn.addEventListener("click", () => {
 
     emailCodeError.textContent = "";
     alert("다음 단계로 이동합니다.");
-    // 실제 프로젝트에서는 아래 주석 해제 후 페이지 이동
     // location.href = "../page2/index.html";
 });
