@@ -1,22 +1,21 @@
 :root {
-    --primary-Blue900: #3C53D5;
-    --primary-Blue800: #4961E6;
-    --primary-Blue700: #5469DE;
-    --primary-Blue600: #778AF4;
-    --primary-Blue500: #95A4F6;
-    --primary-Blue400: #A6B3FA;
-    --gray-100: #D9D9D9;
-    --gray-200: #F5F5F5;
-    --text-1: #111111;
-    --text-2: #4F4F4F;
-    --text-3: #8A8A8A;
-    --text-4: #CFD3DC;
-    --text-5: #3E444E;
-    --text-6: #2E3B51;
-    --error: #D64545;
+  --primary-Blue900: #3c53d5;
+  --primary-Blue800: #4961e6;
+  --primary-Blue700: #5469de;
+  --primary-Blue600: #778af4;
+  --primary-Blue500: #95a4f6;
+  --primary-Blue400: #a6b3fa;
+  --gray-100: #d9d9d9;
+  --gray-200: #f5f5f5;
+  --text-1: #111111;
+  --text-2: #4f4f4f;
+  --text-3: #8a8a8a;
+  --text-4: #cfd3dc;
+  --text-5: #3e444e;
+  --text-6: #2e3b51;
+  --error: #d64545;
+  --success: #28a745;
 }
-
-
 
 body {
   background-color: #ffffff;
@@ -38,7 +37,6 @@ body {
   overflow: hidden;
 }
 
-/* 왼쪽 브랜드 섹션 */
 .brand-section {
   width: 40%;
   background: var(--primary-Blue700);
@@ -51,7 +49,7 @@ body {
   text-align: left;
 }
 
-.logo img{
+.logo img {
   width: 120px;
   height: auto;
 }
@@ -70,7 +68,6 @@ body {
   opacity: 0.95;
 }
 
-/* 오른쪽 폼 섹션 */
 .form-section {
   width: 60%;
   display: flex;
@@ -104,34 +101,37 @@ body {
   margin-bottom: 8px;
 }
 
-/* 한 줄 배치용 */
 .input-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
 }
 
-/* input이 공간 대부분 채우도록 */
 .input-row .form-input {
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-/* 버튼 고정 크기 */
 .sub-btn {
-    flex-shrink: 0;
-    padding: 10px 16px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    background-color: var(--primary-Blue700);
-    color: white;
-
-    border: none;         /* 버튼 테두리 제거 */
-    outline: none;        /* 포커스 시 기본 외곽선 제거 */
+  flex-shrink: 0;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: var(--primary-Blue700);
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
+.sub-btn:disabled {
+  background-color: var(--primary-Blue600);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
 
 .bar {
   color: var(--primary-Blue400);
@@ -165,34 +165,25 @@ body {
   padding-right: 40px;
 }
 
-.sub-btn {
-    padding: 10px 16px;
-    border-radius: 8px;
-    background-color: var(--primary-Blue700);
-    color: white;
-    border: none;
-    outline: none;
-    transition: 0.2s;
-}
-
-.sub-btn:disabled {
-    background-color: var(--primary-Blue600);    /* 연한 회색 */
-    cursor: not-allowed;
-    opacity: 0.7;
-}
-
 .toggle-btn {
-    background: var(--primary-Blue400);
-    border: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    cursor: pointer;
+  background: var(--primary-Blue400);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
 }
-
 
 .error-message {
   font-size: 12px;
   color: var(--error);
+  margin-top: 0px;
+  display: block;
+  min-height: 16px;
+}
+
+.success-message {
+  font-size: 12px;
+  color: var(--success);
   margin-top: 0px;
   display: block;
   min-height: 16px;
@@ -213,7 +204,7 @@ body {
 }
 
 .signup-btn:not(:disabled) {
-  background-color: var(--primary-Blue700);  /* 활성화 즉시 진한색 */
+  background-color: var(--primary-Blue700);
   cursor: pointer;
 }
 
@@ -241,9 +232,6 @@ body {
 .link-login:hover {
   text-decoration: underline;
 }
-
-
-
 
 @media (max-width: 768px) {
   .login-container {
