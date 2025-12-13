@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEENS</title>
+    <link rel="icon" href="./asset/TEENSlogo/TEENSminilogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/contract.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="./asset/TEENSlogo/TEENSlogoW.png" alt="TEENS"></a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#contract">근로계약서</a></li>
+            <li><a href="#calculator">임금계산기</a></li>
+            <li><a href="#community">티키타카</a></li>
+            <li><a href="#board">정보게시판</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="login.html" class="nav-btn login-btn">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i><span>log in</span>
+            </a>
+            <a href="" target="_blank" class="nav-btn user-btn">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </nav>
+    </header>
+    <div class="container">
+        <div class="page-wrapper">
+            <div class="main-content page page-contract">
+                
+                <div class="contract-header-img">
+                    <img src="./asset/contractImg/contract_1.png" alt="근로계약서 작성하기">
+                </div>
+
+                <div class="contract-paper">
+                    
+                    <h2 class="contract-title"><strong>표준근로계약서</strong></h2>
+
+                    <div class="contract-body">
+                        <p>
+                            <input type="text" class="medium-input middle-input"> (이하 “사업주”라 함)과(와)
+                            <input type="text" class="medium-input middle-input"> (이하 “근로자”라 함)은 다음과 같이 근로계약을 체결한다.
+                        </p>
+                    <br>
+                        <p>
+                            <strong>1. 근로계약기간 :</strong>  
+                            <input type="text" class="tiny-input year-input"> 년  
+                            <input type="text" class="tiny-input month-input"> 월  
+                            <input type="text" class="tiny-input day-input"> 일부터  
+                            <input type="text" class="tiny-input year-input"> 년  
+                            <input type="text" class="tiny-input month-input"> 월  
+                            <input type="text" class="tiny-input day-input"> 일까지  
+                            <br>
+                            ※ 근로계약기간을 정하지 않는 경우에는 “근로개시일”만 기재
+                        </p>
+                    <p></p>
+                        <p>
+                            <strong>2. 근 무 장 소 :</strong>
+                            <input type="text" class="line-input" style="width: 80%;">
+                        </p>
+                    <br>
+                        <p>
+                            <strong>3. 업무의 내용 :</strong>
+                            <input type="text" class="line-input" style="width: 80%;">
+                        </p>
+                    <br>
+                        <p>
+                            <strong>4. 소정근로시간 :</strong>  
+                            시 <input type="text" class="tiny-input"> 분부터  
+                            시 <input type="text" class="tiny-input"> 분까지  
+                            (휴게시간 :  
+                            시 <input type="text" class="tiny-input"> 분 ~  
+                            시 <input type="text" class="tiny-input"> 분)
+                        </p>
+                    <br>
+                        <p>
+                            <strong>5. 근무일/휴일 :</strong>  
+                            매주 <input type="text" class="tiny-input"> 일  
+                            (또는 매일단위)근무,  
+                            주휴일 매주 <input type="text" class="tiny-input weekday-input" > 요일
+                        </p>
+                    <br>
+                        <p>
+                            <strong>6. 임 금</strong><br>
+                            - 월(일, 시간)급 : <input type="number" class="line-input" style="width: 200px;"> 원 <br><br>
+                        
+                            - 상여금 :  
+                            있음 ( <input type="checkbox" id="bonus-yes" class="circle-check"> )  
+                            <input type="text" class="line-input middle-input optional-pay" style="width: 200px;"> 원  
+                            없음 ( <input type="checkbox" id="bonus-no" class="circle-check"> )  
+                            <br><br>
+                        
+                            - 기타급여(제수당 등) :  
+                            있음 ( <input type="checkbox" class="circle-check" > ),  
+                            없음 ( <input type="checkbox" class="circle-check" > )
+                            <br>
+                            <input type="text" class="medium-input middle-input optional-pay" style="width: 45%;"> 원,  
+                            <input type="text" class="medium-input middle-input optional-pay" style="width: 45%;"> 원
+                            <br>
+                            <input type="text" class="medium-input middle-input optional-pay" style="width: 45%;"> 원,  
+                            <input type="text" class="medium-input middle-input optional-pay" style="width: 45%;"> 원
+                            <br><br>
+                        
+                            - 임금지급일 : 매월(매주 또는 매일)
+                            <input type="text" class="tiny-input"> 일
+                            (휴일의 경우는 전일 지급)
+                            <br>
+                        
+                            - 지급방법 :  
+                            근로자에게 직접지급( <input type="checkbox" class="circle-check"> ),  
+                            근로자 명의 예금통장에 입금( <input type="checkbox" class="circle-check"> )
+                        </p>
+                    <p></p>
+                        <p>
+                            <strong>7. 연차유급휴가</strong><br>
+                            - 연차유급휴가는 근로기준법에서 정하는 바에 따라 부여함
+                        </p>
+                    <p></p>
+                        <p>
+                            <strong>8. 사회보험 적용여부 (해당란에 체크)</strong><br>
+
+                            <label> ( <input type="checkbox" name="insure" value="고용보험" class="checkmark-check"> ) 고용보험</label>&nbsp;&nbsp;
+                            <label> ( <input type="checkbox" name="insure" value="산재보험" class="checkmark-check"> ) 산재보험</label>&nbsp;&nbsp;
+                            <label> ( <input type="checkbox" name="insure" value="국민연금" class="checkmark-check"> ) 국민연금</label>&nbsp;&nbsp;
+                            <label> ( <input type="checkbox" name="insure" value="건강보험" class="checkmark-check"> ) 건강보험</label>
+                        </p>                    
+                        <p></p>
+                        <p>
+                            <strong>9. 근로계약서 교부</strong><br>
+                            - 사업주는 근로계약을 체결함과 동시에 본 계약서를 사본하여  
+                            근로자의 교부 요구와 관계없이 근로자에게 교부함(근로기준법 제17조)
+                        </p>
+                    <p></p>
+                        <p>
+                            <strong>10. 근로계약·취업규칙의 성실한 이행의무</strong><br>
+                            - 사업주와 근로자는 근로계약, 취업규칙, 단체협약을 성실하게 이행하여야 함
+                        </p>
+                    <p></p>
+                        <p>
+                            <strong>11. 기타</strong><br>
+                            - 이 계약에 정함이 없는 사항은 근로기준법에 따름
+                        </p>
+
+                    </div>
+
+                    <div class="contract-sign">
+
+                        <!-- 날짜 -->
+                        <div class="sign-row date-row">
+                            <input type="text" class="tiny-input year-input"> <span>년</span>
+                            <input type="text" class="tiny-input month-input"> <span>월</span>
+                            <input type="text" class="tiny-input day-input"> <span>일</span>
+                        </div>
+
+                        <br>
+                        <!-- 사업주 -->
+                        <div class="sign-row">
+                            <strong>(사업주)</strong>
+                            <span>사업체명 :</span>
+                            <input type="text" class="line-input">
+                        </div>
+
+                        <div class="sign-row">
+                            <span>연락처 :</span>
+                            <input type="tel" class="medium-input phone">
+                        </div>
+
+                        <div class="sign-row">
+                            <span>주소 :</span>
+                            <input type="text" class="line-input" id="BO-address-input">
+                        </div>
+
+                        <div class="sign-row">
+                            <span>대표자 :</span>
+                            <input type="text" class="medium-input">
+                            <span>(서명)</span>
+                        </div>
+                        <br>
+                        <!-- 근로자 -->
+                        <div class="sign-row">
+                            <strong>(근로자)</strong>
+                            <span>주소 :</span>
+                            <input type="text" class="line-input" id="WO-address-input">
+                        </div>
+                        <div class="sign-row">
+                            <span>연락처 :</span>
+                            <input type="text" class="medium-input phone">
+                        </div>
+                        <div class="sign-row">
+                            <span>성명 :</span>
+                            <input type="text" class="medium-input">
+                            <span>(서명)</span>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="button-area">
+                    <button class="action-btn" id="pdfBtn" >
+                        <i class="fa-solid fa-file-pdf"></i>
+                        PDF 다운로드
+                    </button>
+                    <button class="action-btn" id="goGuide">
+                        작성방법 보러가기
+                    </button>
+                </div>
+
+                <p id="warn-msg" class="warn-text" style="display:none;">
+                    * 필수 항목을 모두 입력해주세요.
+                </p>
+            </div>
+
+            <div class="main-content page page-guide">
+                
+                <div class="contract-header-img">
+                    <img src="./asset/contractImg/contract_2.png" alt="근로계약서 작성방법">
+                </div>
+
+                    <div class="contract-paper">
+
+                        <h2 class="contract-title"><strong>표준근로계약서(작성방법)</strong></h2>
+
+                        <div class="contract-body">
+                            <p>
+                                &nbsp;&nbsp;&nbsp;&nbsp; 국승리 &nbsp;&nbsp;&nbsp;&nbsp; (이하 “사업주”라 함)과(와)
+                                &nbsp;&nbsp;&nbsp;&nbsp; 최희원 &nbsp;&nbsp;&nbsp;&nbsp; (이하 “근로자”라 함)은 다음과 같이 근로계약을 체결한다.
+                            </p>
+                        <br>
+                            <p>
+                                <strong>1. 근로계약기간 :</strong>  
+                                    &nbsp;&nbsp;&nbsp; 2025 &nbsp;&nbsp;&nbsp; 년  
+                                    &nbsp;&nbsp;&nbsp; 09 &nbsp;&nbsp;&nbsp; 월  
+                                    &nbsp;&nbsp;&nbsp; 25 &nbsp;&nbsp;&nbsp; 일부터  
+                                    &nbsp;&nbsp;&nbsp; 2025 &nbsp;&nbsp;&nbsp; 년  
+                                    &nbsp;&nbsp;&nbsp; 10 &nbsp;&nbsp;&nbsp; 월  
+                                    &nbsp;&nbsp;&nbsp; 25 &nbsp;&nbsp;&nbsp; 일까지  
+                                <br>
+                                ※ 근로계약기간을 정하지 않는 경우에는 “근로개시일”만 기재
+                                <br>`<span class="gray-text">→ 노사가 협의하여 결정하는 일을 하기로 한 기간</span>
+                            </p>
+                        <p></p>
+                            <p>
+                                <strong>2. 근 무 장 소 :</strong>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 대전광역시 유성구 가정북로 76   
+                            <br><span class="gray-text">→ 일을 수행하기 위한 장소를 명기</span>
+                            </p>
+                            
+                        <br>
+                            <p>
+                                <strong>3. 업무의 내용 :</strong>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   프론트엔드 기능 구현 보조, 웹페이지 유지·보수, UI 요소 디자인 보조
+                                <br><span class="gray-text">→ 어떤 일을 할지에 대한 내용을 기재</span>
+                            </p>
+                        <br>
+                            <p>
+                                <strong>4. 소정근로시간 :</strong>  
+                                &nbsp;&nbsp;&nbsp; 14시 &nbsp;&nbsp;&nbsp; 00 &nbsp;&nbsp;&nbsp;분부터  
+                                &nbsp;&nbsp;&nbsp; 18시 &nbsp;&nbsp;&nbsp; 00 &nbsp;&nbsp;&nbsp;분까지  
+                                (휴게시간 :  
+                                &nbsp;&nbsp;&nbsp; 16시 &nbsp;&nbsp;&nbsp; 00 &nbsp;&nbsp;&nbsp;분 ~  
+                                &nbsp;&nbsp;&nbsp; 16시 &nbsp;&nbsp;&nbsp; 10 &nbsp;&nbsp;&nbsp;분)
+                                <br><span class="gray-text">→ 노사가 법정근로시간 내(하루 8시간, 주40시간)에서 하루에 몇시간을 일할지 정한 시간을 기재휴게시간은 4시간에 30분, <br>8시간인 경우 1시간 이상을 주도록 소정근로시간 내에서 기재함</span>
+                            </p>
+                        <br>
+                            <p>
+                                <strong>5. 근무일/휴일 :</strong>  
+                                매주 &nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp; 일  
+                                (또는 매일단위)근무,  
+                                주휴일 매주 &nbsp;&nbsp;&nbsp; 일 &nbsp;&nbsp;&nbsp; 요일
+                                <br><span class="gray-text">→ 일주일 중 어떤날에 근무할지를 명기하며, 주 중 근무하기로 한날을 만근 하였을 경우<br>
+                                부여하는 유급휴일(주휴일)을 어느 요일로 할지 결정하여 명기</span>
+                            </p>
+                        <br>
+                            <p>
+                                <strong>6. 임 금</strong><br>
+                                - 월(일, 시간)급 : &nbsp;&nbsp;&nbsp; 1,400,000 원 &nbsp;&nbsp;&nbsp; <br>
+                                <span class="gray-text">→ 임금을 시간급으로 정할지, 주급으로 정할지, 월급으로 정할지 결정하여 그 금액 명기</span><br>
+                                - 상여금 :  
+                                있음 (  &nbsp;&nbsp;&nbsp; )  
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 원  
+                                없음 ( 〇 )  
+                                <br><span class="gray-text">→ 상여금이 있으면 그 내용 및 금액에 대해 기재</span>
+                                <br><br>
+                            
+                                - 기타급여(제수당 등) :  
+                                있음 ( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ),  
+                                없음 ( 〇 )
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 원,  
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 원
+                                <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 원,  
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 원
+                                <br><span class="gray-text">→ 가족수당, 자격증 수당 등 지급하기로 한 수당이 있으면 해당 내용에 대해 기재</span>
+                                <br><br>
+                            
+                                - 임금지급일 : 매월(매주 또는 매일)
+                                &nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;일 
+                                (휴일의 경우는 전일 지급)
+                                <br><span class="gray-text">→ 임금을 매월 언제 지급할 것인지에 대해 기재</span>
+                                <br>
+                            
+                                - 지급방법 :  
+                                근로자에게 직접지급( &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ),  
+                                근로자 명의 예금통장에 입금( &nbsp;&nbsp;&nbsp;&nbsp;〇&nbsp;&nbsp;&nbsp;&nbsp; )
+                                <br><span class="gray-text">→ 임금을 계좌로 지급할 것인지 등에 대해 노사간 협의 후 기재</span>
+                            </p>
+                        <p></p>
+                            <p>
+                                <strong>7. 연차유급휴가</strong><br>
+                                - 연차유급휴가는 근로기준법에서 정하는 바에 따라 부여함
+                                <br><span class="gray-text">→ ①1년간 총 소정근로일의 80%이상 출근자에게 15일부여, 1년 초과 매 2년마다 1일씩 가산, 한도 25일<br>②1년 미만 또는 1년간 80% 미만 출근자에게 1개월 개근시 1일 부여</span>
+                            </p>
+                        <p></p>
+                            <p>
+                                <strong>8. 사회보험 적용여부 (해당란에 체크)</strong><br>
+
+                                <label> ( &nbsp;&nbsp;&nbsp;&nbsp; ) 고용보험</label>&nbsp;&nbsp;
+                                <label> ( &nbsp;&nbsp;&nbsp;&nbsp; ) 산재보험</label>&nbsp;&nbsp;
+                                <label> ( &nbsp;&nbsp;&nbsp;&nbsp; ) 국민연금</label>&nbsp;&nbsp;
+                                <label> ( &nbsp;&nbsp;&nbsp;&nbsp; ) 건강보험</label>
+                                <br><span class="gray-text">→ 사회보험 적용에 대한 해당 내용을 기재</span>
+                            </p>                    
+                            <p></p>
+                            <p>
+                                <strong>9. 근로계약서 교부</strong><br>
+                                - 사업주는 근로계약을 체결함과 동시에 본 계약서를 사본하여  
+                                근로자의 교부 요구와 관계없이 근로자에게 교부함(근로기준법 제17조)
+                                <br><span class="gray-text">→ 근로기준법 제17조에 따라 근로계약 체결시 근로자에게 교부하여야 함을 알려주는 내용</span>
+                            </p>
+                        <p></p>
+                            <p>
+                                <strong>10. 근로계약·취업규칙의 성실한 이행의무</strong><br>
+                                - 사업주와 근로자는 근로계약, 취업규칙, 단체협약을 성실하게 이행하여야 함
+                            </p>
+                        <p></p>
+                            <p>
+                                <strong>11. 기타</strong><br>
+                                - 이 계약에 정함이 없는 사항은 근로기준법에 따름
+                            </p>
+
+                        </div>
+
+                        <div class="contract-sign">
+
+                            <!-- 날짜 -->
+                            <div class="sign-row date-row">
+                                 2025 &nbsp;&nbsp;&nbsp;&nbsp;<span>년</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp; 9 &nbsp;&nbsp;&nbsp;&nbsp;<span>월</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp; 25 &nbsp;&nbsp;&nbsp;&nbsp;<span>일</span>
+                            </div>
+
+                            <br>
+                            <!-- 사업주 -->
+                            <div class="sign-row">
+                                <strong>(사업주)</strong>
+                                <span>사업체명 :</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;틴즈&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                            <div class="sign-row">
+                                <span>연락처 :</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;010-1234-5678
+                            </div>
+                            <div class="sign-row">
+                                <span>주소 :</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;대전광역시 유성구 가정북로 76
+                            </div>
+                            <div class="sign-row">
+                                <span>대표자 :</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;국승리
+                                <span>(서명)</span>
+                            </div>
+                            <br>
+                            <!-- 근로자 -->
+                            <div class="sign-row">
+                                <strong>(근로자)</strong>
+                                <span>주소 :</span>
+                                대전광역시 서구 둔산동 🤔🤔아파트
+                            </div>
+                            <div class="sign-row">
+                                <span>연락처 :</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;010-9876-5432
+                            </div>
+                            <div class="sign-row">
+                                <span>성명 :</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;최희원&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>(서명)</span>
+                            </div>
+
+                        </div>
+
+                </div>
+                <div class="button-area">
+                    <button class="action-btn" id="backBtn">
+                        계약서 작성하기
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="./asset/TEENSlogo/TEENSlogoW.png" alt="TEENS">
+            </div>
+            <p class="copyright">
+                Copyright 2025 ABCchocolate.<br>
+                All rights reserved.
+            </p>
+        </div>
+
+        <div class="footer-right">
+            <div class="member">
+                <span class="name">국승리</span>
+                <span class="role">BE</span>
+            </div>
+            <div class="member">
+                <span class="name">김민서</span>
+                <span class="role">BE</span>
+            </div>
+            <div class="member">
+                <span class="name">최하은</span>
+                <span class="role">FE / Design</span>
+            </div>
+            <div class="member">
+                <span class="name">최희원</span>
+                <span class="role">FE</span>
+            </div>
+
+            <a href="https://github.com/" target="_blank" class="github-icon">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!--JS-->
+    <script src="./js/contract.js"></script>
+    <script src="./js/header.js"></script>
+
+    <!-- PDF 변환 라이브러리 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
