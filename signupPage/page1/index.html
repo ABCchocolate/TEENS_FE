@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEENS signup</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1429680651.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="login-container">
+        <!-- 왼쪽 -->
+        <div class="brand-section">
+            <div class="brand-content">
+                <div class="logo"><img src="./TEENSlogoW.png" alt="TEENS"></div>
+                <h1 class="brand-title">TEENS에 오신 것을 환영해요!</h1>
+                <p class="bar">----</p>
+                <p class="brand-description">
+                    TEENS는 청소년을 위해<br>
+                    안전한 근로 정보를 제공하는 플랫폼입니다.<br>
+                </p>
+            </div>
+        </div>
+
+        <!-- 오른쪽  -->
+        <div class="form-section">
+            <form id="signupForm" class="signup-form">
+                <h2 class="form-title">sign up</h2>
+
+                <!-- 이메일 -->
+                <div class="form-group">
+                    <label for="useremail" class="form-label">이메일</label>
+                    <div class="input-row">
+                        <input
+                            type="email"
+                            id="useremail"
+                            name="useremail"
+                            class="form-input"
+                            placeholder="이메일을 입력해주세요."
+                            required
+                            pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.com$"
+                        />
+                        <button type="button" id="sendEmailCodeBtn" class="sub-btn">코드전송</button>
+                    </div>
+                    <span id="useremailError" class="error-message"></span>
+                </div>
+
+                <!-- 이메일 인증 코드 입력 -->
+                <div id="emailCodeWrapper" class="form-group" style="display:none;">
+                    <label for="emailCode" class="form-label">인증 코드</label>
+                    <div class="input-row" style="position: relative;">
+                        <input
+                            type="text"
+                            id="emailCode"
+                            name="emailCode"
+                            class="form-input"
+                            placeholder="6자리 코드를 입력해주세요"
+                            maxlength="6"
+                        />
+                        <span id="emailTimer" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); font-size: 12px; color: var(--text-3);">
+                            03:00
+                        </span>
+                    </div>
+                    <span id="emailCodeError" class="error-message"></span>
+                </div>
+
+                <!-- 아이디 -->
+                <div class="form-group">
+                    <label for="userId" class="form-label">아이디</label>
+                    <div class="input-row">
+                        <input
+                            type="text"
+                            id="userId"
+                            name="userId"
+                            class="form-input"
+                            placeholder="아이디를 입력해주세요"
+                        />
+                        <button type="button" id="checkUserIdBtn" class="sub-btn">중복확인</button>
+                    </div>
+                    <span id="userIdError" class="error-message"></span>
+                </div>
+
+                <!-- 전체 에러 메시지 -->
+                <span id="generalError" class="error-message"></span>
+
+                <!-- 다음 버튼 -->
+                <button type="button" id="signupBtn" class="signup-btn" disabled>
+                    다음
+                </button>
+
+                <!-- 로그인 이동 -->
+                <div class="bottom-links">
+                    <span class="text-gray">계정이 있으신가요?</span>
+                    <a href="../loginPage/index.html" class="link-login">로그인</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

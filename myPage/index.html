@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="https://kit.fontawesome.com/1429680651.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- 헤더 -->
+<header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="./TEENSlogoW.png" alt="TEENS"></a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#contract">근로계약서</a></li>
+            <li><a href="#calculator">임금계산기</a></li>
+            <li><a href="#community">티키타카</a></li>
+            <li><a href="#board">정보게시판</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="login.html" class="nav-btn login-btn">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i><span>log in</span>
+            </a>
+            <a href="" target="_blank" class="nav-btn user-btn">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </nav>
+</header>
+
+
+    <div class="container">
+        <!-- Header -->
+        <div class="myheader">
+            <h1>마이페이지</h1>
+            <button class="logout-btn" onclick="handleLogout()">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                logout
+            </button>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-left">
+                <div class="profile-image-container">
+                    <img id="profileImage" src="./TEENSuser.png" alt="프로필 사진" class="profile-image">
+                    <button class="profile-edit-btn" onclick="handleProfileImageChange()">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                </div>
+                <div class="profile-info">
+                    <div class="username-row">
+                        <h2 id="displayName">사용자이름</h2>
+                        <button class="edit-btn" onclick="handleEditUsername()">
+                           <i class="fa-solid fa-pen-to-square"></i>
+                        </button>
+                    </div>
+                    <p class="userid" id="displayUserId">@userId</p>
+                </div>
+            </div>
+
+            <div class="profile-stats">
+                <div class="stat-item">
+                    <span class="stat-label">글 작성</span>
+                    <span class="stat-value" id="postCount">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">댓글 작성</span>
+                    <span class="stat-value" id="commentCount">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Account Info Section -->
+        <div class="account-section">
+            <div class="account-item">
+                <span class="account-label">이메일</span>
+                <span class="account-value" id="emailValue">user@example.com</span>
+            </div>
+            <div class="account-item">
+                <span class="account-label">비밀번호</span>
+                <div class="password-row">
+                    <span class="account-value password-masked">*******</span>
+                    <button class="edit-btn" onclick="handleEditPassword()">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Account Deletion -->
+        <div class="account-deletion">
+            <button class="deletion-btn" onclick="handleAccountDeletion()">회원탈퇴</button>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="editUsernameModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>사용자이름 변경</h3>
+            <input type="text" id="usernameInput" placeholder="새로운 사용자이름" class="modal-input">
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" onclick="closeModal('editUsernameModal')">취소</button>
+                <button class="modal-btn confirm" onclick="confirmEditUsername()">변경</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="editPasswordModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>비밀번호 변경</h3>
+            <input type="password" id="currentPasswordInput" placeholder="현재 비밀번호" class="modal-input">
+            <input type="password" id="newPasswordInput" placeholder="새로운 비밀번호" class="modal-input">
+            <input type="password" id="confirmPasswordInput" placeholder="비밀번호 확인" class="modal-input">
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" onclick="closeModal('editPasswordModal')">취소</button>
+                <button class="modal-btn confirm" onclick="confirmEditPassword()">변경</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="logoutModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>로그아웃</h3>
+            <p>정말로 로그아웃하시겠습니까?</p>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" onclick="closeModal('logoutModal')">취소</button>
+                <button class="modal-btn confirm" onclick="confirmLogout()">로그아웃</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteAccountModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>회원탈퇴</h3>
+            <p>정말로 회원탈퇴하시겠습니까? 이 작업은 되돌릴 수 없습니다.</p>
+            <div class="modal-buttons">
+                <button class="modal-btn cancel" onclick="closeModal('deleteAccountModal')">취소</button>
+                <button class="modal-btn confirm delete" onclick="confirmDeleteAccount()">탈퇴</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
