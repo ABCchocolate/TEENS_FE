@@ -5,7 +5,7 @@ const postId = urlParams.get('id');
 async function loadPost() {
     try {
         // 테스트용 (백엔드 API 대신)
-        const response = await fetch('./testPost.json');
+        const response = await fetch('../forumListPage/testPosts.json');  // 경로 수정
         
         // 실제 사용 (백엔드 API)
         // const response = await fetch(`http://localhost:8080/forum/${postId}`);
@@ -21,7 +21,7 @@ async function loadPost() {
         
         if (!data) {
             alert('게시글을 찾을 수 없습니다.');
-            window.location.href = 'freeBoard.html';
+            window.location.href = '../forumListPage/forumListPage.html';
             return;
         }
 
@@ -140,12 +140,12 @@ function search() {
     }
     
     // 검색 결과 페이지로 이동
-    window.location.href = `freeBoard.html?search=${encodeURIComponent(searchInput)}&filter=${filter}`;
+    window.location.href = `forumList.html?search=${encodeURIComponent(searchInput)}&filter=${filter}`;
 }
 
 // 목록으로 돌아가기
 function goBack() {
-    window.location.href = 'freeBoard.html';
+    window.location.href = '../forumListPage/forumList.html';
 }
 
 // 페이지 로드 시 게시글 데이터 가져오기

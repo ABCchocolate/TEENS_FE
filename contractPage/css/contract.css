@@ -138,6 +138,19 @@ body {
     left: 871px;
 }
 
+.contract-sign2 {
+    display: inline;
+    width: 339px;
+    height: 260px;
+    font-size: 14px;
+    line-height: 1.6;
+
+    position: absolute;
+
+    top: 1700px;
+    left: 871px;
+}
+
 .contract-paper input[type="checkbox"] {
     transform: scale(1.1);
     margin-right: 4px;
@@ -319,4 +332,15 @@ body {
 
 .gray-text {
     color: #aeaeae;
+}
+
+.bruh-input {
+    width: 50px !important;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    text-align: center;
+    padding: 2px 4px;
 }
