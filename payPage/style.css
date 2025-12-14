@@ -1,5 +1,6 @@
 @import url(./header.css);
 @import url(./common.css);
+@import url(./footer.css);
 
 :root {
   --primary-Blue900: #3c53d5;
@@ -21,8 +22,6 @@
 
 body {
   background-color: white;
-  padding: 20px;
-  display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -35,7 +34,10 @@ body {
   border-radius: 12px;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  margin-top: 84px;
+  margin-top: 154px;
+  margin-left: auto;  
+  margin-right: auto; 
+  margin-bottom: 100px;
 }
 
 /* Header */
