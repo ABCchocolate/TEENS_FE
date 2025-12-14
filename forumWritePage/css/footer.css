@@ -1,0 +1,74 @@
+.footer {
+    width: 100%;
+    background: #5567e9;
+    color: #fff;
+    padding: 60px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 왼쪽 */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+/* 오른쪽 전체 */
+.footer-right {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 50px;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    transform: translateY(40px);
+}
+
+.member .name {
+    font-weight: 600;
+}
+
+.member .role {
+    opacity: 0.8;
+    font-size: 13px;
+}
+
+.github-icon {
+    position: absolute;
+    right: -30px; 
+    top: -20px;   
+    z-index: 100;  
+}
+
+.github-icon .fa-github {
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    transform: translateY(-40px);
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+    .footer {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .footer-right {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+}

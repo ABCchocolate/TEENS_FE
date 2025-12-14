@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEENS 자유게시판 - 글 상세보기</title>
+    <title>TEENS 자유게시판</title>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEENS</title>
     <link rel="icon" href="./asset/TEENSlogo/TEENSminilogo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/boardDetail.css">
-    
+    <link rel="stylesheet" href="./css/forumList.css">
+
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -35,6 +40,7 @@
     </header>
     
     <div class="container">
+
         <div class="top-section">
             <h1>자유게시판</h1>
             <div class="right-controls">
@@ -51,65 +57,31 @@
             </div>
         </div>
 
-        <!-- 글 내용 박스 -->
-        <div class="post-container">
-            <!-- 파란색 헤더 -->
-            <div class="post-header"></div>
-
-            <!-- 글 제목 영역 -->
-            <div class="post-title-section">
-                <h2 class="post-title" id="postTitle">참깨라면사주세요제발요</h2>
-                <div class="post-meta">
-                    <div class="author-info">
-                        <div class="author-avatar"></div>
-                        <div class="author-details">
-                            <span class="author-name" id="authorName">test</span>
-                            <span class="post-date" id="postDate">2025.10.25</span>
-                        </div>
-                    </div>
-                </div>
+        <!-- 게시판 테이블 -->
+        <div class="board-container">
+            <div class="board-header">
+                <div>번호</div>
+                <div>제목</div>
+                <div>작성자</div>
+                <div>작성일</div>
             </div>
-
-            <!-- 글 내용 -->
-            <div class="post-content" id="postContent">
-                test
-            </div>
-
-            <!-- 댓글 섹션 -->
-            <div class="comment-section">
-                <div class="comment-header">
-                    <i class="fa-regular fa-comment"></i>
-                    <span>댓글</span>
-                </div>
-
-                <!-- 댓글 목록 -->
-                <div class="comment-list" id="commentList">
-                    <div class="comment-item">
-                        <div class="comment-avatar"></div>
-                        <div class="comment-content">
-                            <div class="comment-author">test</div>
-                            <div class="comment-text">test</div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- 댓글 입력 -->
-                <div class="comment-input-section">
-                    <div class="comment-input-avatar">maremare</div>
-                    <input type="text" class="comment-input" placeholder="댓글을 작성하세요." id="commentInput">
-                </div>
+            <div class="board-content" id="boardContent">
+                <!-- 게시글이 여기 들어감 -->
             </div>
         </div>
 
-        <!-- 글 작성 버튼 밑에나 댓글 섹션 밑에 추가 -->
-        <div class="back-btn-container">
-            <button class="back-btn" onclick="goBack()">
-                <i class="fa-solid fa-arrow-left"></i>
-                <span>목록으로</span>
+        <!-- 페이지네이션 -->
+        <div class="pagination" id="pagination">
+            <!-- 페이지 버튼이 여기 들어감 -->
+        </div>
+
+        <!-- 글 작성 버튼 -->
+        <div class="write-btn-container">
+            <button class="write-btn" onclick="writePost()">
+                <span>+</span>
+                <span>글 작성</span>
             </button>
         </div>
-
     </div>
 
     <footer class="footer">
@@ -147,7 +119,7 @@
         </div>
     </footer>
 
-    <script src="./js/boardDetail.js"></script>
+    <script src="./js/forumList.js"></script>
     <script src="./js/header.js"></script>
 </body>
 </html>

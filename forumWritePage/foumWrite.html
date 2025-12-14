@@ -3,15 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEENS 자유게시판</title>
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEENS</title>
+    <title>TEENS 자유게시판 - 글 작성</title>
     <link rel="icon" href="./asset/TEENSlogo/TEENSminilogo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/freeBoard.css">
-
+    <link rel="stylesheet" href="./css/forumWrite.css">
+    
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -40,7 +35,6 @@
     </header>
     
     <div class="container">
-
         <div class="top-section">
             <h1>자유게시판</h1>
             <div class="right-controls">
@@ -57,29 +51,41 @@
             </div>
         </div>
 
-        <!-- 게시판 테이블 -->
-        <div class="board-container">
-            <div class="board-header">
-                <div>번호</div>
-                <div>제목</div>
-                <div>작성자</div>
-                <div>작성일</div>
+        <!-- 글 작성 폼 -->
+        <div class="write-container">
+            <!-- 파란색 헤더 -->
+            <div class="write-header">
+                게시글 작성하기
             </div>
-            <div class="board-content" id="boardContent">
-                <!-- 게시글이 여기 들어감 -->
+
+            <!-- 작성 폼 -->
+            <div class="write-form">
+                <!-- 제목 입력 -->
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        class="title-input" 
+                        placeholder="제목을 작성해주세요" 
+                        id="postTitle"
+                        maxlength="100"
+                    >
+                </div>
+
+                <!-- 내용 입력 -->
+                <div class="input-group">
+                    <textarea 
+                        class="content-input" 
+                        placeholder="내용을 작성해주세요" 
+                        id="postContent"
+                    ></textarea>
+                </div>
             </div>
         </div>
 
-        <!-- 페이지네이션 -->
-        <div class="pagination" id="pagination">
-            <!-- 페이지 버튼이 여기 들어감 -->
-        </div>
-
-        <!-- 글 작성 버튼 -->
-        <div class="write-btn-container">
-            <button class="write-btn" onclick="writePost()">
-                <span>+</span>
-                <span>글 작성</span>
+        <!-- 등록 버튼 -->
+        <div class="submit-btn-container">
+            <button class="submit-btn" onclick="submitPost()">
+                등록
             </button>
         </div>
     </div>
@@ -119,7 +125,7 @@
         </div>
     </footer>
 
-    <script src="./js/freeBoard.js"></script>
+    <script src="./js/forumWrite.js"></script>
     <script src="./js/header.js"></script>
 </body>
 </html>
