@@ -8,7 +8,7 @@ let filteredPosts = []; // 필터링된 게시글
 async function loadPosts() {
     try {
         // 테스트용 (백엔드 API 대신)
-        const response = await fetch('./testInfo.json');
+        const response = await fetch('./testinfo.json');
         
         // 실제 사용 (백엔드 API)
         // const response = await fetch('http://localhost:8080/information');

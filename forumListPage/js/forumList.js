@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 게시글 상세보기
 function viewPost(id) {
-    window.location.href = `.../forumDetailPage/forumDetil.html?id=${id}`;
+    window.location.href = `../forumDetailPage/forumDetail.html?id=${id}`;
 }
 
 // 글 작성
