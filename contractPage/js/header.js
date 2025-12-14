@@ -1,3 +1,4 @@
+// 헤더 
 document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
     let lastScrollY = 0;
@@ -11,3 +12,4 @@ document.addEventListener("DOMContentLoaded", () => {
         lastScrollY = window.scrollY;
     });
 });
+
