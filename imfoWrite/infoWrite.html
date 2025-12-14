@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEENS 정보게시판 - 글 작성</title>
+    <link rel="icon" href="./asset/TEENSlogo/TEENSminilogo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/infoWrite.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="./asset/TEENSlogo/TEENSlogoW.png" alt="TEENS"></a>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#contract">근로계약서</a></li>
+            <li><a href="#calculator">임금계산기</a></li>
+            <li><a href="#community">티키타카</a></li>
+            <li><a href="#board">정보게시판</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="login.html" class="nav-btn login-btn">
+                <i class="fa-solid fa-arrow-right-to-bracket"></i><span>log in</span>
+            </a>
+            <a href="" target="_blank" class="nav-btn user-btn">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </div>
+    </nav>
+    </header>
+    
+    <div class="container">
+        <div class="top-section">
+            <h1>정보게시판</h1>
+            <div class="right-controls">
+                <select class="filter-dropdown" id="filter">
+                    <option value="all">제목</option>
+                    <option value="title">제목</option>
+                    <option value="author">작성자</option>
+                    <option value="content">내용</option>
+                </select>
+                <div class="search-box">
+                    <input type="text" placeholder="검색어를 입력하세요" id="searchInput">
+                    <button onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 글 작성 폼 -->
+        <div class="write-container">
+            <!-- 파란색 헤더 -->
+            <div class="write-header">
+                <span>게시글 작성하기</span>
+                <div class="toggle-container">
+                    <button class="toggle-btn" id="infoBtn" onclick="selectType('INFO')">정보</button>
+                    <button class="toggle-btn active" id="noticeBtn" onclick="selectType('NOTICE')">공지</button>
+                </div>
+            </div>
+
+            <!-- 작성 폼 -->
+            <div class="write-form">
+                <!-- 제목 입력 -->
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        class="title-input" 
+                        placeholder="제목을 작성해주세요" 
+                        id="postTitle"
+                        maxlength="100"
+                    >
+                </div>
+
+                <!-- 내용 입력 -->
+                <div class="input-group">
+                    <textarea 
+                        class="content-input" 
+                        placeholder="내용을 작성해주세요" 
+                        id="postContent"
+                    ></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- 등록 버튼 -->
+        <div class="submit-btn-container">
+            <button class="submit-btn" onclick="submitPost()">
+                등록
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+            <div class="footer-logo">
+                <img src="./asset/TEENSlogo/TEENSlogoW.png" alt="TEENS">
+            </div>
+            <p class="copyright">
+                Copyright 2025 ABCchocolate.<br>
+                All rights reserved.
+            </p>
+        </div>
+
+        <div class="footer-right">
+            <div class="member">
+                <span class="name">국승리</span>
+                <span class="role">BE</span>
+            </div>
+            <div class="member">
+                <span class="name">김민서</span>
+                <span class="role">BE</span>
+            </div>
+            <div class="member">
+                <span class="name">최하은</span>
+                <span class="role">FE / Design</span>
+            </div>
+            <div class="member">
+                <span class="name">최희원</span>
+                <span class="role">FE</span>
+            </div>
+
+            <a href="https://github.com/" target="_blank" class="github-icon">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./js/infoWrite.js"></script>
+    <script src="./js/header.js"></script>
+</body>
+</html>
