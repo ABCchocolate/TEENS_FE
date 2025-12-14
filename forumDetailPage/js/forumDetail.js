@@ -5,7 +5,7 @@ const postId = urlParams.get('id');
 async function loadPost() {
     try {
         // 테스트용 (백엔드 API 대신)
-        const response = await fetch('../forumListPage/testPosts.json');  // 경로 수정
+        const response = await fetch('./testPost.json');
         
         // 실제 사용 (백엔드 API)
         // const response = await fetch(`http://localhost:8080/forum/${postId}`);
